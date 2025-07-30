@@ -1,3 +1,7 @@
+"use client";
+
+import Button from "./_components/Button";
+
 const LoginPage = () => {
   return (
     <div className='bg-white p-8 rounded-lg shadow-md w-full max-w-md'>
@@ -23,12 +27,14 @@ const LoginPage = () => {
             className='w-full p-2 border border-gray-300 rounded-md'
           />
         </div>
-        <button
-          type='submit'
-          className='w-full bg-blue-500 text-white p-2 rounded-md'
+        <Button
+          onClick={(e) => {
+            e.preventDefault();
+            console.log("clicked");
+          }}
         >
           Login
-        </button>
+        </Button>
       </form>
     </div>
   );
