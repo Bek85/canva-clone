@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Home() {
@@ -13,9 +14,14 @@ export default function Home() {
   };
 
   return (
-    <div>
-      <Button onClick={clickHandler}>Click me</Button>
+    <div className='flex flex-col items-center justify-center h-screen gap-4'>
+      <Button onClick={clickHandler}>Fetch something from API</Button>
       <p>{response}</p>
+      <div className='flex gap-4'>
+        <Link href='/blog'>Blog</Link>
+        <Link href='/register'>Register</Link>
+        <Link href='/login'>Login</Link>
+      </div>
     </div>
   );
 }
