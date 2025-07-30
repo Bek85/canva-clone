@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { useEditor } from "@/features/editor/hooks/useEditor";
+import { useEditor } from "@/features/editor/hooks/use-editor";
 import * as fabric from "fabric";
 
 export const Editor = () => {
@@ -16,6 +16,10 @@ export const Editor = () => {
     });
 
     init({ initialCanvas: canvas, initialContainer: containerRef.current! });
+
+    return () => {
+      canvas.dispose();
+    };
   }, [init]);
 
   return (

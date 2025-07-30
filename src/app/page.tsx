@@ -18,9 +18,7 @@ export default function Home() {
       <Button onClick={clickHandler}>Fetch something from API</Button>
       <p>{response}</p>
       <div className='flex gap-4'>
-        <Link href='/blog'>Blog</Link>
-        <Link href='/register'>Register</Link>
-        <Link href='/login'>Login</Link>
+        <Link href='/editor/1'>Editor 1</Link>
       </div>
     </div>
   );
